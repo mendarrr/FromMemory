@@ -98,9 +98,4 @@ function hideCreateBox() {
     createBox.style.display = "none";
 }
 
-
-
-
 // FETCHING THE API AFRICAN COUNTRIES
-
-
