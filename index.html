@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards App</title>
+    <style>
+        .flashcard {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .flashcard:hover {
+            background-color: #f0f0f0;
+        }
+        .flashcard h2 {
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .flashcard .question {
+            border-bottom: 1px solid #ccc;
+        }
+        .flashcard .answer {
+            display: none;
+            color: blue;
+        }
+        .flashcard.favorite {
+            background-color: #ffff99 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="flashcards">
+        <!-- Flashcards will be appended here -->
+    </div>
+
+    <div class="create-box" style="display: none;">
+        <input type="text" id="question" placeholder="Enter question">
+        <input type="text" id="answer" placeholder="Enter answer">
+        <button onclick="addFlashcard()">Add Flashcard</button>
+        <button onclick="hideCreateBox()">Cancel</button>
+    </div>
+
+    <button onclick="showCreateCardBox()">Create Flashcard</button>
+    <button onclick="delFlashcards()">Delete All Flashcards</button>
+
+    <script>
+        const flashcards = document.querySelector(".flashcards");
+        const createBox = document.querySelector(".create-box");
+        const questionInput = document.getElementById("question");
+        const answerInput = document.getElementById("answer");
+        let contentArray = localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : [];
+
+        contentArray.forEach(divMaker);
+
+        function divMaker(flashcard) {
+            const div = document.createElement("div");
+            div.className = "flashcard";
+            const h2_question = document.createElement("h2");
+            const h2_answer = document.createElement("h2");
+            h2_question.className = "question";
+            h2_answer.className = "answer";
+
+            h2_question.textContent = flashcard.my_question;
+            h2_answer.textContent = flashcard.my_answer;
+
+            div.appendChild(h2_question);
+            div.appendChild(h2_answer);
+
+            div.addEventListener("click", function () {
+                h2_answer.style.display = h2_answer.style.display === "none" ? "block" : "none";
+            });
+
+            flashcards.appendChild(div);
+        }
+
+        function addFlashcard() {
+            const question = questionInput.value.trim();
+            const answer = answerInput.value.trim();
+
+            if (question === '' || answer === '') {
+                alert("Please enter both question and answer.");
+                return;
+            }
+
+            const flashcard_info = {
+                "my_question": question,
+                "my_answer": answer
+            };
+
+            contentArray.push(flashcard_info);
+            localStorage.setItem('items', JSON.stringify(contentArray));
+
+            divMaker(flashcard_info);
+
+            alert("Flashcard added successfully.");
+
+            questionInput.value = '';
+            answerInput.value = '';
+        }
+
+        function delFlashcards() {
+            if (confirm("Are you sure you want to delete all flashcards?")) {
+                localStorage.clear();
+                flashcards.textContent = "";
+                contentArray = [];
+
+                alert("All flashcards have been deleted");
+            }
+        }
+
+        function showCreateCardBox() {
+            createBox.style.display = "block";
+        }
+
+        function hideCreateBox() {
+            createBox.style.display = "none";
+        }
+    </script>
+</body>
+</html>
