@@ -116,10 +116,5 @@ function hideCreateBox() {
 
 // Linking the login file to the index.html
 
-document.getElementById("btn").addEventListener("click", function(event) {
-    event.preventDefault();
-    window.location.href = "index.html";
-  });
-
 
 
