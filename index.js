@@ -1,20 +1,9 @@
-
-
-
-
-
-
-
-// JAVASCRIPT CODE FOR THE SECOND PAGE...
-
-
-
 const flashcards = document.getElementsByClassName("flashcards")[0];
 const createBox = document.getElementsByClassName("create-box")[0];
 const questionInput = document.getElementById("question");
 const answerInput = document.getElementById("answer");
 
-// 
+// storing the answers in the local storage 
 let contentArray = localStorage.getItem("items") ? JSON.parse(localStorage.getItem("items")) : [];
 
 // calling the function not only in the localStorage but also as soon as we are using our web page... it populates the web page
@@ -108,10 +97,4 @@ function showCreateCardBox() {
 function hideCreateBox() {
     createBox.style.display = "none";
 }
-
-
-
-
-// FETCHING THE API AFRICAN COUNTRIES
-
 
