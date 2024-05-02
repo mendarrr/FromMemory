@@ -114,4 +114,12 @@ function hideCreateBox() {
 
 // FETCHING THE API AFRICAN COUNTRIES
 
+// Linking the login file to the index.html
+
+document.getElementById("btn").addEventListener("click", function(event) {
+    event.preventDefault();
+    window.location.href = "index.html";
+  });
+
+
 
