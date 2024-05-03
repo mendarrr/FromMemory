@@ -14,7 +14,11 @@ contentArray.forEach(divMaker);
 // it creates a flashcard for each of the flashcard that we had before the page is exited...
 
 function divMaker(text) {
+<<<<<<< HEAD
   // Creating a div element for the flashcard
+=======
+  // creating a div element and storing it in the variable div. same for the h2_qustion, h2_answer
+>>>>>>> main
   let div = document.createElement("div");
   let h2_question = document.createElement("h2");
   let h2_answer = document.createElement("h2");
@@ -22,6 +26,7 @@ function divMaker(text) {
   h2_question.className = "question";
   h2_answer.className = "answer";
 
+<<<<<<< HEAD
   // Allows us to type our question and answer
   h2_question.textContent = text.my_question;
   h2_answer.textContent = text.my_answer;
@@ -72,6 +77,26 @@ function divMaker(text) {
     alert("Marked as not memorized!");
   });
   iconContainer.appendChild(notMemorizedIcon);
+=======
+  // allows us to tpye our question
+  h2_question.textContent = text.my_question;
+
+  // allows us to tpye our answer
+  h2_answer.textContent = text.my_answer;
+
+  // adding the two div elements to the div container
+  div.appendChild(h2_question);
+  div.appendChild(h2_answer);
+
+  div.addEventListener("click", function () {
+    //  we have created an if else block code...if the event of a click has happened, then the answer will display, else if we click again, the answer is hidden.
+    h2_answer.style.display =
+      h2_answer.style.display === "none" ? "block" : "none";
+  });
+
+  // adding the div element to the flashcards container
+  flashcards.appendChild(div);
+>>>>>>> main
 }
 
 // a function that adds the flashcards

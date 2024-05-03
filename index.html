@@ -1,113 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FromMemory</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script defer 
-      src="https://kit.fontawesome.com/c3d0b246eb.js"
-      crossorigin="anonymous"
-    ></script>
-    
-  </head>
-  <body>
-    <!-- Main Container Begins-->
-    <div class="main-container">
-      <!-- Sidebar Begins here-->
-      <div class="sidebar">
-        <div class="logo">
-          <a href="#">
-            <div class="logs">
-                <div class="from">
-                    <span>F</span>rom
-                </div>
-                <div class="memory">
-                    <span class="m">M</span>emory
-                </div>
-            </div>
-          </a>
-        </div>
-        <nav class="nav-container">
-            <ul class="nav">
-                <li>
-                  <a href="#home-section" class="active"><i class="fa-solid fa-house"></i>Home</a>
-                </li>
-                <li>
-                  <a href="#qa-section"><i class="fa-solid fa-question"></i>QA</a>
-                </li>
-                <li>
-                  <a href="#flash-section"><i class="fa-solid fa-list"></i>Flashcards</a>
-                </li>
-              </ul>
-        </nav>
-      </div>
-      <!-- Sidebar Ends here-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards App</title>
+    <style>
+        .flashcard {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .flashcard:hover {
+            background-color: #f0f0f0;
+        }
+        .flashcard h2 {
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+        }
+        .flashcard .question {
+            border-bottom: 1px solid #ccc;
+        }
+        .flashcard .answer {
+            display: none;
+            color: blue;
+        }
+        .flashcard.favorite {
+            background-color: #ffff99 !important;
+        }
+    </style>
+</head>
+<body>
 
-      <div class="main-content">
-        <!-- Home Section Begins -->
-        <section id="home-section">
-          <h1>Welcome to Flashcards App</h1>
+    <div class="flashcards">
+        <!-- Flashcards will be appended here -->
+    </div>
 
-
-           <!-- trying to link the newly introduced html files to see if they will work -->
-        <link rel="stylesheet" href="favorites.html">
-
-
-          <p></p>
-        </section>
-        <!-- Home Section Ends -->
-        <!-- QA Section Begins -->
-        <section id="qa-section">
-          <div class="create-box" style="display: none">
-           <form action="" class="form">
-            <h1>MemorizeMe</h1>
-            <div class="form-group">
-                <input type="text" id="question" placeholder="Enter question" />
-            </div>
-            <div class="form-group">
-                <input type="text" id="answer" placeholder="Enter answer" />
-            </div>
-           <div id="btns">
-            <div id="add-btn">
-                <button onclick="addFlashcard()" class="add-btn">ADD</button>
-            </div>
-            <div id="cancel-btn">
-                <button onclick="hideCreateBox()" class="cancel-btn">CANCEL</button>
-            </div>
-           </div>
-           </form>
-          </div>
-
-          <div id="btn">
-            <button onclick="showCreateCardBox()" class="create-btn button">Create A Flashcard</button>
-            <button onclick="delFlashcards()" class="delete-btn button">Delete All Flashcards</button>
-          </div>
-        </section>
-        <!-- QA Section Ends -->
-
-
-        <!-- Flashcards Section Begins -->
-        <section id="flash-section" >
-           <div class="flashcard-container">
-            <div class="flashcards">
-                <!-- Flashcards will be appended here -->
-            </div>
-           </div>
-        </section>
-        <!-- Flashcards Section Ends -->
-      </div>
+    <div class="create-box" style="display: none;">
+        <input type="text" id="question" placeholder="Enter question">
+        <input type="text" id="answer" placeholder="Enter answer">
+        <button onclick="addFlashcard()">Add Flashcard</button>
+        <button onclick="hideCreateBox()">Cancel</button>
     </div>
     <!-- Main Container Ends-->
 
     <script src="script.js"></script>
   </body>
 </html>
-
-
-
-
-
-
- 
-

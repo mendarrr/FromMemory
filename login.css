@@ -11,7 +11,11 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
+<<<<<<< HEAD
         background: conic-gradient(from 45deg,  #eb7e02,  #fdcd95,  #f8a444,  #f1a751,  #d18b3a,  #e08b28,  #e6ad6c,  #ec840c,  #e68619);
+=======
+        background: conic-gradient(from 45deg, rgb(248, 184, 87), rgb(255, 190, 92),rgb(255, 204, 127),rgb(255, 188, 87),rgb(255, 172, 47),rgb(248, 150, 3),rgb(250, 186, 91),rgb(255, 180, 68));
+>>>>>>> main
         background-size: cover;
         background-position: center;
     }
@@ -21,7 +25,11 @@
       height: 520px;
       background: transparent;
       border: 2px solid black;
+<<<<<<< HEAD
       backdrop-filter: blur(50px);
+=======
+      backdrop-filter: blur(60px);
+>>>>>>> main
       box-shadow: 0 0 10px rgba(0, 0, 0, .3);
       color: black;
       border-radius: 50px;
@@ -91,7 +99,8 @@
         padding: 5px;
         margin-left: 200px;
         justify-content: center;
-        color: #ffecd6;
+        color: #572f03;
+        font-weight: 700;
     }
 
     .remfo:hover{
