@@ -14,7 +14,7 @@ contentArray.forEach(divMaker);
 // it creates a flashcard for each of the flashcard that we had before the page is exited...
 
 function divMaker(text) {
-  // creating a div element and storing it in the variable div. same for the h2_qustion, h2_answer
+  // Creating a div element for the flashcard
   let div = document.createElement("div");
   let h2_question = document.createElement("h2");
   let h2_answer = document.createElement("h2");
@@ -22,24 +22,56 @@ function divMaker(text) {
   h2_question.className = "question";
   h2_answer.className = "answer";
 
-  // allows us to tpye our question
+  // Allows us to type our question and answer
   h2_question.textContent = text.my_question;
-
-  // allows us to tpye our answer
   h2_answer.textContent = text.my_answer;
 
-  // adding the two div elements to the div container
+  // Adding the question and answer elements to the flashcard
   div.appendChild(h2_question);
   div.appendChild(h2_answer);
 
+  // Adding event listener to toggle display of answer on click
   div.addEventListener("click", function () {
-    //  we have created an if else block code...if the event of a click has happened, then the answer will display, else if we click again, the answer is hidden.
-    h2_answer.style.display =
-      h2_answer.style.display === "none" ? "block" : "none";
+    h2_answer.style.display = h2_answer.style.display === "none" ? "block" : "none";
   });
 
-  // adding the div element to the flashcards container
+  // Adding the div element to the flashcards container
   flashcards.appendChild(div);
+
+  // Creating a div element for icons
+  let iconContainer = document.createElement("div");
+  iconContainer.className = "icon-container";
+  div.appendChild(iconContainer);
+
+  // Adding favorite icon
+  let favoriteIcon = document.createElement("i");
+  favoriteIcon.className = "far fa-heart";
+  favoriteIcon.addEventListener("click", function (event) {
+    event.stopPropagation(); // Prevents the click event from bubbling up to the flashcard div
+    // Implement favorite functionality here
+    alert("Added to favorites!");
+  });
+  iconContainer.appendChild(favoriteIcon);
+
+  // Adding memorized icon
+  let memorizedIcon = document.createElement("i");
+  memorizedIcon.className = "far fa-check-circle";
+  memorizedIcon.addEventListener("click", function (event) {
+    event.stopPropagation(); // Prevents the click event from bubbling up to the flashcard div
+    // Implement memorized functionality here
+    alert("Marked as memorized!");
+  });
+  iconContainer.appendChild(memorizedIcon);
+
+  // Adding not memorized icon
+  let notMemorizedIcon = document.createElement("i");
+  notMemorizedIcon.className = "far fa-times-circle";
+  notMemorizedIcon.addEventListener("click", function (event) {
+    event.stopPropagation(); // Prevents the click event from bubbling up to the flashcard div
+    // Implement not memorized functionality here
+    alert("Marked as not memorized!");
+  });
+  iconContainer.appendChild(notMemorizedIcon);
 }
 
 // a function that adds the flashcards
