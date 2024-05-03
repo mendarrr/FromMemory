@@ -11,7 +11,7 @@
         justify-content: center;
         align-items: center;
         min-height: 100vh;
-        background: url(./assets/login.png) no-repeat;
+        background: conic-gradient(from 45deg,  #eb7e02,  #fdcd95,  #f8a444,  #f1a751,  #d18b3a,  #e08b28,  #e6ad6c,  #ec840c,  #e68619);
         background-size: cover;
         background-position: center;
     }
@@ -21,7 +21,7 @@
       height: 520px;
       background: transparent;
       border: 2px solid black;
-      backdrop-filter: blur(20px);
+      backdrop-filter: blur(50px);
       box-shadow: 0 0 10px rgba(0, 0, 0, .3);
       color: black;
       border-radius: 50px;
