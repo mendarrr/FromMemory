@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flashcards App</title>
+    <title>FromMemory</title>
     <link rel="stylesheet" href="./style.css" />
     <script
       src="https://kit.fontawesome.com/c3d0b246eb.js"
@@ -17,28 +17,36 @@
       <!-- Sidebar Begins here-->
       <div class="sidebar">
         <div class="logo">
-          <a href="#"><span>F</span>rom<span>M</span>emory</a>
+          <a href="#">
+            <div class="logs">
+                <div class="from">
+                    <span>F</span>rom
+                </div>
+                <div class="memory">
+                    <span class="m">M</span>emory
+                </div>
+            </div>
+          </a>
         </div>
-        <div class="nav-toggler">
-          <span></span>
-        </div>
-        <ul class="nav">
-          <li>
-            <a href="#home-section" class="active"><i class="fa-solid fa-house"></i>Home</a>
-          </li>
-          <li>
-            <a href="#qa-section"><i class="fa-solid fa-question"></i>QA</a>
-          </li>
-          <li>
-            <a href="#flash-section"><i class="fa-solid fa-list"></i>Flashcards</a>
-          </li>
-        </ul>
+        <nav class="nav-container">
+            <ul class="nav">
+                <li>
+                  <a href="#home-section" class="active"><i class="fa-solid fa-house"></i>Home</a>
+                </li>
+                <li>
+                  <a href="#qa-section"><i class="fa-solid fa-question"></i>QA</a>
+                </li>
+                <li>
+                  <a href="#flash-section"><i class="fa-solid fa-list"></i>Flashcards</a>
+                </li>
+              </ul>
+        </nav>
       </div>
       <!-- Sidebar Ends here-->
 
       <div class="main-content">
         <!-- Home Section Begins -->
-        <section id="home-section" style="display: none">
+        <section id="home-section">
           <h1>Welcome to Flashcards App</h1>
           <p></p>
         </section>
@@ -48,16 +56,19 @@
           <div class="create-box" style="display: none">
            <form action="" class="form">
             <h1>MemorizeMe</h1>
-            <h3><i class="fa-duotone fa-lightbulb-on fa-fade"></i></h3>
             <div class="form-group">
                 <input type="text" id="question" placeholder="Enter question" />
             </div>
             <div class="form-group">
                 <input type="text" id="answer" placeholder="Enter answer" />
             </div>
-           <div class="btns">
-            <button onclick="addFlashcard()" class="add-btn">ADD</button>
-            <button onclick="hideCreateBox()" class="cancel-btn">CANCEL</button>
+           <div id="btns">
+            <div id="add-btn">
+                <button onclick="addFlashcard()" class="add-btn">ADD</button>
+            </div>
+            <div id="cancel-btn">
+                <button onclick="hideCreateBox()" class="cancel-btn">CANCEL</button>
+            </div>
            </div>
            </form>
           </div>
@@ -71,9 +82,11 @@
 
         <!-- Flashcards Section Begins -->
         <section id="flash-section" >
+           <div class="flashcard-container">
             <div class="flashcards">
                 <!-- Flashcards will be appended here -->
-              </div>
+            </div>
+           </div>
         </section>
         <!-- Flashcards Section Ends -->
       </div>
