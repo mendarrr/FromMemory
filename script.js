@@ -18,16 +18,11 @@ function divMaker(text) {
     let h2_question = document.createElement("h2");
     let h2_answer = document.createElement("h2");
     div.className = "flashcard";
-
-
-    // styling it more...
-    h2_question.setAttribute("style", "border-top: 1px solid red; padding: 15px; margin-top: 30px");
+    h2_question.className = "question";
+    h2_answer.className = "answer";
 
     // allows us to tpye our question
     h2_question.textContent = text.my_question;
-
-    h2_answer.setAttribute("style", "text-align: center; display: none; color: blue");
-
 
     // allows us to tpye our answer
     h2_answer.textContent = text.my_answer;
@@ -98,4 +93,13 @@ function hideCreateBox() {
     createBox.style.display = "none";
 }
 
-// FETCHING THE API AFRICAN COUNTRIES
+// Select all links in the navigation bar
+const links = document.querySelectorAll('nav a')
+
+// Add a click event to each link
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        links.forEach(link => link.classList.remove('active'));
+        link.classList.add('active');
+    });
+});
