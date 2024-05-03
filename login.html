@@ -10,18 +10,18 @@
 <body>
 
     <div class="starter">
-       <form action="" class="form">
+       <form action="index.html" method="GET" class="form"> <!-- Change the action to index.html -->
         <h1>Create Account</h1>
         <div class="form-group">
-            <input type="email" placeholder="Email" required class="input-email">
+            <input type="email" name="email" placeholder="Email" required class="input-email"> <!-- Add name attribute for email -->
             <i class="fa-solid fa-envelope"></i>
         </div>
         <div class="form-group">
-            <input type="text" placeholder="Username" required class="input">
+            <input type="text" name="username" placeholder="Username" required class="input"> <!-- Add name attribute for username -->
             <i class="fa-solid fa-user"></i>
         </div>
         <div class="form-group">
-            <input type="password" placeholder="Password" required class="input">
+            <input type="password" name="password" placeholder="Password" required class="input"> <!-- Add name attribute for password -->
             <i class="fa-solid fa-lock"></i>
         </div>
 
