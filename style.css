@@ -373,10 +373,11 @@ section{
     background: radial-gradient(circle, rgb(250, 240, 184), rgb(255, 193, 112));
 }
 
-.flashcard .question{
-    margin-right: 50px; 
+.flashcard .question{ 
     padding: 15px; 
     margin-top: 20px;
+    text-align: center;
+
 }
 
 .flashcard .answer{
@@ -387,4 +388,12 @@ section{
     font-weight: 700;
     padding: 15px;
 }
-  
+
+.far{
+    font-size: 20px;
+    color: rgb(156, 102, 1);
+    margin-right: 10px;
+    margin-left: 20px;
+    text-align: center;
+}
+ 

@@ -65,7 +65,7 @@ function divMaker(text) {
 
   // Adding not memorized icon
   let notMemorizedIcon = document.createElement("i");
-  notMemorizedIcon.className = "far fa-times-circle";
+  notMemorizedIcon.className = "far fa-circle-xmark";
   notMemorizedIcon.addEventListener("click", function (event) {
     event.stopPropagation(); // Prevents the click event from bubbling up to the flashcard div
     // Implement not memorized functionality here
