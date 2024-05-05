@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FromMemory</title>
     <link rel="stylesheet" href="./style.css" />
-    <script defer 
+    <script
+      defer
       src="https://kit.fontawesome.com/c3d0b246eb.js"
       crossorigin="anonymous"
     ></script>
-    
   </head>
   <body>
     <!-- Main Container Begins-->
@@ -19,36 +19,42 @@
         <div class="logo">
           <a href="#">
             <div class="logs">
-                <div class="from">
-                    <span>F</span>rom
-                </div>
-                <div class="memory">
-                    <span class="m">M</span>emory
-                </div>
+              <div class="from"><span>F</span>rom</div>
+              <div class="memory"><span class="m">M</span>emory</div>
             </div>
           </a>
         </div>
         <nav class="nav-container">
-            <ul class="nav">
-                <li>
-                  <a href="#home-section" class="active"><i class="fa-solid fa-house"></i>Home</a>
-                </li>
-                <li>
-                  <a href="#qa-section"><i class="fa-solid fa-question"></i>QA</a>
-                </li>
-                <li>
-                  <a href="#flash-section"><i class="fa-solid fa-list"></i>Flashcards</a>
-                </li>
-                <li>
-                  <a href="#favorites-section"><i class="fa-solid fa-heart"></i>Favorites</a>
-                </li>
-                <li>
-                  <a href="#memorized-section"><i class="fa-solid fa-circle-check"></i>Memorized</a>
-                </li>
-                <li>
-                  <a href="#not-memorized-section"><i class="fa-solid fa-circle-xmark"></i>MemorizeMe</a>
-                </li>
-              </ul>
+          <ul class="nav">
+            <li>
+              <a href="#home-section" class="active"
+                ><i class="fa-solid fa-house"></i>Home</a
+              >
+            </li>
+            <li>
+              <a href="#qa-section"><i class="fa-solid fa-question"></i>QA</a>
+            </li>
+            <li>
+              <a href="#flash-section"
+                ><i class="fa-solid fa-list"></i>Flashcards</a
+              >
+            </li>
+            <li>
+              <a href="#favorites-section"
+                ><i class="fa-solid fa-heart"></i>Favorites</a
+              >
+            </li>
+            <li>
+              <a href="#memorized-section"
+                ><i class="fa-solid fa-circle-check"></i>Memorized</a
+              >
+            </li>
+            <li>
+              <a href="#not-memorized-section"
+                ><i class="fa-solid fa-circle-xmark"></i>MemorizeMe</a
+              >
+            </li>
+          </ul>
         </nav>
       </div>
       <!-- Sidebar Ends here-->
@@ -56,73 +62,99 @@
       <div class="main-content">
         <!-- Home Section Begins -->
         <section id="home-section">
-          <h1>Welcome to Flashcards App</h1>
-
-
-           <!-- trying to link the newly introduced html files to see if they will work -->
-        <link rel="stylesheet" href="favorites.html">
-
-
-          <p></p>
+          <div class="home-container">
+            <div class="home-text">
+              <div class="heading">
+                <h1>
+                  Welcome to<br><span class="title">FromMemory</span>
+                </h1>
+              </div>
+              <div class="sub-title">
+                <h3>
+                  Transform your learning with FromMemory;<br />
+                  Proven, Portable, personalized
+                </h3>
+                <a href="#qa-section"><h6>Start Smart learning Today</h6></a>
+              </div>
+            </div>
+            <div class="home-img1">
+              <img src="assets/bubble.png" alt="bubble">
+            </div>
+            <div class="home-img2">
+              <img src="assets/bubble.png" alt="bubble">
+            </div>
+          </div>
         </section>
         <!-- Home Section Ends -->
         <!-- QA Section Begins -->
         <section id="qa-section">
           <div class="create-box" style="display: none">
-           <form action="" class="form">
-            <h1>MemorizeMe</h1>
-            <div class="form-group">
+            <form action="" class="form">
+              <h1>MemorizeMe</h1>
+              <div class="form-group">
                 <input type="text" id="question" placeholder="Enter question" />
-            </div>
-            <div class="form-group">
+              </div>
+              <div class="form-group">
                 <input type="text" id="answer" placeholder="Enter answer" />
-            </div>
-           <div id="btns">
-            <div id="add-btn">
-                <button onclick="addFlashcard()" class="add-btn">ADD</button>
-            </div>
-            <div id="cancel-btn">
-                <button onclick="hideCreateBox()" class="cancel-btn">CANCEL</button>
-            </div>
-           </div>
-           </form>
+              </div>
+              <div id="btns">
+                <div id="add-btn">
+                  <button onclick="addFlashcard()" class="add-btn">ADD</button>
+                </div>
+                <div id="cancel-btn">
+                  <button onclick="hideCreateBox()" class="cancel-btn">
+                    CANCEL
+                  </button>
+                </div>
+              </div>
+            </form>
           </div>
 
           <div id="btn">
-            <button onclick="showCreateCardBox()" class="create-btn button">Create A Flashcard</button>
-            <button onclick="delFlashcards()" class="delete-btn button">Delete All Flashcards</button>
+            <button onclick="showCreateCardBox()" class="create-btn button">
+              Create A Flashcard
+            </button>
+            <button onclick="delFlashcards()" class="delete-btn button">
+              Delete All Flashcards
+            </button>
           </div>
         </section>
         <!-- QA Section Ends -->
 
-
-
-        <!-- Flashcards Section Begins -->
-        <section id="flash-section" >
-           <div class="flashcard-container">
+        <!-- All Flashcards Section Begins -->
+        <section id="flash-section">
+          <div class="flashcard-container">
             <div class="flashcards">
-                <!-- Flashcards will be appended here -->
+              <!-- All Flashcards will be appended here -->
             </div>
-           </div>
+          </div>
         </section>
-        <!-- Flashcards Section Ends -->
-
+        <!-- All Flashcards Section Ends -->
 
         <!-- Favorites Section Begins-->
         <section id="favorites-section">
           <h1>Favorites</h1>
+          <div class="favorites">
+            <!-- Flashcards will be appended here -->
+          </div>
         </section>
         <!-- Favorites Section Ends -->
 
         <!-- Memorized section Begins -->
         <section id="memorized-section">
           <h1>Memorized</h1>
+          <div class="memorized">
+            <!-- Flashcards will be appended here -->
+          </div>
         </section>
         <!-- Memorized section Ends -->
 
         <!-- Not Memorized section Begins -->
         <section id="not-memorized-section">
           <h1>Not Memorized</h1>
+          <div class="non-memorized">
+            <!-- Flashcards will be appended here -->
+          </div>
         </section>
         <!-- Not Memorized section Ends -->
       </div>
@@ -132,4 +164,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
