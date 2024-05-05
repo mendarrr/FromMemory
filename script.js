@@ -49,6 +49,7 @@ function divMaker(text) {
   favoriteIcon.addEventListener("click", function (event) {
     event.stopPropagation(); // Prevents the click event from bubbling up to the flashcard div
     // Implement favorite functionality here
+    
     alert("Added to favorites!");
   });
   iconContainer.appendChild(favoriteIcon);
