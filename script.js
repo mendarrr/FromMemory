@@ -49,6 +49,7 @@ function divMaker(text) {
   favoriteIcon.addEventListener("click", function (event) {
     event.stopPropagation(); // Prevents the click event from bubbling up to the flashcard div
     // Implement favorite functionality here
+    
     alert("Added to favorites!");
   });
   iconContainer.appendChild(favoriteIcon);
@@ -65,7 +66,7 @@ function divMaker(text) {
 
   // Adding not memorized icon
   let notMemorizedIcon = document.createElement("i");
-  notMemorizedIcon.className = "far fa-times-circle";
+  notMemorizedIcon.className = "far fa-circle-xmark";
   notMemorizedIcon.addEventListener("click", function (event) {
     event.stopPropagation(); // Prevents the click event from bubbling up to the flashcard div
     // Implement not memorized functionality here
@@ -134,3 +135,5 @@ links.forEach((link) => {
     link.classList.add("active");
   });
 });
+
+// Animating the home images

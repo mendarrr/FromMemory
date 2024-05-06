@@ -199,6 +199,75 @@ section{
     /* display: none; */
 }
 
+.home-container{
+    display: flex;
+    flex-direction: row;    
+}
+
+.home-text{
+    margin-top: 20%;
+}
+
+.heading h1{
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.sub-title h3{
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-top: 1px;
+}
+
+.sub-title h6{
+    text-align: center;
+    color: #ac7e00;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.sub-title h6:hover{
+    color: brown;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.fa-hand-point-up{
+    font-size: 20px;
+    margin-left: 220px;
+    margin-top: 5px;
+    color: rgb(0, 35, 80);
+}
+
+
+
+.heading h1 span{
+    font-family: 'Clicker Script', cursive;
+    font-size: 75px;
+    margin-left: 15px;
+    color: #6d4f2e;
+    letter-spacing: 12px;
+}
+
+.home-img{
+    display: flex;
+}
+
+.home-img1{
+    margin-left: 120px;
+}
+
+.home-img2{
+    margin-left: 190px;
+    margin-top: 463px;
+}
+
 /* qa section */
 #qa-section{
     padding-top: 100px;
@@ -333,7 +402,7 @@ section{
 }
 
 
-#flash-section{
+#flash-section, #favorites-section, #memorized-section, #not-memorized-section{
     background: radial-gradient(circle, rgb(248, 238, 224), antiquewhite);
     border-top: 50px;
 }
@@ -373,10 +442,11 @@ section{
     background: radial-gradient(circle, rgb(250, 240, 184), rgb(255, 193, 112));
 }
 
-.flashcard .question{
-    margin-right: 50px; 
+.flashcard .question{ 
     padding: 15px; 
     margin-top: 20px;
+    text-align: center;
+
 }
 
 .flashcard .answer{
@@ -387,4 +457,12 @@ section{
     font-weight: 700;
     padding: 15px;
 }
-  
+
+.far{
+    font-size: 20px;
+    color: rgb(156, 102, 1);
+    margin-right: 10px;
+    margin-left: 20px;
+    text-align: center;
+}
+ 
