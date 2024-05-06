@@ -226,17 +226,26 @@ section{
 
 .sub-title h6{
     text-align: center;
-    color: #05b8ff;
+    color: #ac7e00;
     font-weight: 700;
-    font-size: 10px;
+    font-size: 15px;
     cursor: pointer;
 }
 
 .sub-title h6:hover{
     color: brown;
     font-weight: 700;
-    font-size: 10px;
+    font-size: 15px;
 }
+
+.fa-hand-point-up{
+    font-size: 20px;
+    margin-left: 220px;
+    margin-top: 5px;
+    color: rgb(0, 35, 80);
+}
+
+
 
 .heading h1 span{
     font-family: 'Clicker Script', cursive;
@@ -246,13 +255,17 @@ section{
     letter-spacing: 12px;
 }
 
+.home-img{
+    display: flex;
+}
+
 .home-img1{
     margin-left: 120px;
 }
 
 .home-img2{
-    margin-left: 120px;
-    margin-top: 263px;
+    margin-left: 190px;
+    margin-top: 463px;
 }
 
 /* qa section */
@@ -389,7 +402,7 @@ section{
 }
 
 
-#flash-section{
+#flash-section, #favorites-section, #memorized-section, #not-memorized-section{
     background: radial-gradient(circle, rgb(248, 238, 224), antiquewhite);
     border-top: 50px;
 }

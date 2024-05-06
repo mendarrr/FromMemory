@@ -135,3 +135,5 @@ links.forEach((link) => {
     link.classList.add("active");
   });
 });
+
+// Animating the home images
